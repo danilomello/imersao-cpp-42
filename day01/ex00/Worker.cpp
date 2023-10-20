@@ -18,8 +18,13 @@ void Worker::dropTool(Tool* t){
 }
 
 void Worker::work() {
-    for (list<Tool*>::iterator it = tools.begin(); it != tools.end(); ++it)
-	{
-		(*it)->use();
-	};
+    if (tools.empty()) {
+        cout << "To sem ferramenta!" << endl;
+    } else {
+        for (list<Tool*>::iterator it = tools.begin(); it != tools.end(); ++it)
+        {
+            (*it)->use();
+        };
+    }
+    
 }

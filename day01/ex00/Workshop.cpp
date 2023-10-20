@@ -13,7 +13,7 @@ void Workshop::unsubscribeWorker(Worker* worker) {
     cout << "Worker removed" << endl;
 }
 
-void Workshop::executeworkDay() {
+void Workshop::executeWorkDay() {
     int i = 1;
     for (list<Worker*>::iterator it = workers.begin(); it != workers.end(); ++it)
 	{

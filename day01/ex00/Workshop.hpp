@@ -12,10 +12,10 @@ class Workshop {
 
     public:
     Workshop();
-    Workshop(Tool tool);
+    // Workshop(Tool* tool);
     void subscribeWorker(Worker* worker);
     void unsubscribeWorker(Worker* worker);
-    void executeworkDay(); //notify
+    void executeWorkDay(); //notify
 
 };
 

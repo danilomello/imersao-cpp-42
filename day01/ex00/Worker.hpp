@@ -30,7 +30,10 @@ class Worker {
 
     public:
     Worker();
+    ~Worker(){};
     void getTool(Tool* t);
+    // void getToolFromWorker(Tool* t, Worker* w);
+    // void getToolFromWorker(Tool* t, std::nullptr_t nullp);
     void dropTool(Tool* t);
     void work(); //update
     void use();

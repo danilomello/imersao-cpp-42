@@ -13,6 +13,7 @@ class Hammer: public Tool {
 
     public:
         Hammer();
+        // virtual ~Hammer() {};
         ~Hammer() {
             Tool::~Tool();
         };
@@ -24,3 +25,4 @@ class Hammer: public Tool {
 };
 
 #endif
+

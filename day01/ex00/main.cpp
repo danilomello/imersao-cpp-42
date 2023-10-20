@@ -18,8 +18,13 @@ int main() {
 
     ws.subscribeWorker(&w1);
     ws.subscribeWorker(&w2);
-    ws.executeworkDay();
+    ws.executeWorkDay();
     ws.unsubscribeWorker(&w1);
-    ws.executeworkDay();
+    ws.executeWorkDay();
+    w1.~Worker();
+    s->use();
+
+    // h->~Hammer();
+    // s->~Shovel();
 
 }
