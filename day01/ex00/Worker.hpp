@@ -6,6 +6,7 @@
 class Shovel;
 #include "Workshop.hpp"
 class Workshop;
+#include <list>
 
 using namespace std;
 
@@ -25,13 +26,12 @@ class Worker {
     private:
     Position coordonnee;
     Statistic stat;
-    Tool* tool;
+    list<Tool*> tools;
 
     public:
     Worker();
     void getTool(Tool* t);
-    Tool* getToolInUse();
-    void dropTool();
+    void dropTool(Tool* t);
     void work(); //update
     void use();
 

@@ -10,18 +10,16 @@ Worker::Worker() {
 }
 
 void Worker::getTool(Tool* t) {
-
-    this->tool = t;
+    this->tools.push_back(t);
 }
 
-void Worker::dropTool(){
-
-}
-
-Tool* Worker::getToolInUse() {
-    return this->tool;
+void Worker::dropTool(Tool* t){
+    this->tools.remove(t);
 }
 
 void Worker::work() {
-    tool->use();    
+    for (list<Tool*>::iterator it = tools.begin(); it != tools.end(); ++it)
+	{
+		(*it)->use();
+	};
 }

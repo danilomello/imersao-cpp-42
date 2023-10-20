@@ -6,26 +6,20 @@
 
 
 int main() {
-    // Worker w1 = Worker();
-    // Worker w2 = Worker();
-    // Shovel s = Shovel();
 
-    // w1.grabShovel(s);
-    // Workshop ws = Workshop();
-
-
-    
-    Worker w = Worker();
+    Workshop ws = Workshop();
     Shovel* s = new Shovel();
     Hammer* h = new Hammer();
-    // s->use();
-    w.getTool(s);
-    w.work();
-    w.getTool(h);
-    w.work();
 
+    Worker w1 = Worker();
+    w1.getTool(s);
+    Worker w2 = Worker();
+    w2.getTool(h);
 
-    // ws.subscribeWorker(&w);
-    // ws.unsubscribeWorker(&w);
+    ws.subscribeWorker(&w1);
+    ws.subscribeWorker(&w2);
+    ws.executeworkDay();
+    ws.unsubscribeWorker(&w1);
+    ws.executeworkDay();
 
 }
