@@ -4,6 +4,8 @@
 # include <iostream>
 # include "Shovel.hpp"
 class Shovel;
+#include "Workshop.hpp"
+class Workshop;
 
 using namespace std;
 
@@ -23,12 +25,15 @@ class Worker {
     private:
     Position coordonnee;
     Statistic stat;
-    Shovel* shovel;
+    Tool* tool;
 
     public:
     Worker();
-    void grabShovel(Shovel* shovel);
-    void dropShovel();
+    void getTool(Tool* t);
+    Tool* getToolInUse();
+    void dropTool();
+    void work(); //update
+    void use();
 
 };
 

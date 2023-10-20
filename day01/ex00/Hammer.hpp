@@ -1,24 +1,24 @@
-#ifndef SHOVEL_H
-# define SHOVEL_H
+#ifndef HAMMER_H
+# define HAMMER_H
 
 # include <iostream>
 # include "Tool.hpp"
 
 using namespace std;
 
-class Shovel: public Tool {
-    
+class Hammer: public Tool {
+
     private:
         int numberOfUse;
-    
+
     public:
-        Shovel();
-        ~Shovel() {
+        Hammer();
+        ~Hammer() {
             Tool::~Tool();
         };
 
         virtual void use() {
-            cout << "Cavando feliz." << endl;
+            cout << "Batendo feliz." << endl;
             numberOfUse++;
         }
 };

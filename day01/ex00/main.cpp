@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Shovel.hpp"
+#include "Hammer.hpp"
 #include "Worker.hpp"
+#include "Workshop.hpp"
 
 
 int main() {
@@ -9,24 +11,21 @@ int main() {
     // Shovel s = Shovel();
 
     // w1.grabShovel(s);
+    // Workshop ws = Workshop();
 
-    Worker *worker = new Worker();
-    Shovel *shovel = new Shovel();
 
-    worker->grabShovel(shovel);
-    worker->dropShovel();
-    delete worker;
-
-    if (shovel->numberOfUses > 0)
-        std::cout << "Shovel still has uses" << std::endl;
-    else
-        std::cout << "Shovel has no uses" << std::endl;
     
-    delete shovel;
-    if (shovel->numberOfUses > 0)
-        std::cout << "Shovel still has uses" << std::endl;
-    else
-        std::cout << "Shovel has no uses" << std::endl;
-    return (0);
+    Worker w = Worker();
+    Shovel* s = new Shovel();
+    Hammer* h = new Hammer();
+    // s->use();
+    w.getTool(s);
+    w.work();
+    w.getTool(h);
+    w.work();
+
+
+    // ws.subscribeWorker(&w);
+    // ws.unsubscribeWorker(&w);
 
 }

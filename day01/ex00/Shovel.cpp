@@ -1,20 +1,11 @@
 #include <iostream>
-#include "Worker.hpp"
 #include "Shovel.hpp"
 
-Shovel::Shovel(): worker(worker) {
-    numberOfUses = 0;
+Shovel::Shovel() {
+    numberOfUse = 0;
 }
 
-void Shovel::use() {
-    cout << "Cavando feliz." << endl;
-    this->numberOfUses++;
-}
+// void use() {
+//     cout << "Usando a pá" << endl;
+// }
 
-void Shovel::setWorker(Worker* worker) {
-    this->setWorker(worker);
-};
-
-Worker& Shovel::getWorker() {
-    return this->worker;
-}
