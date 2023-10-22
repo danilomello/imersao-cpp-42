@@ -8,6 +8,7 @@ class Shovel;
 class Workshop;
 #include <list>
 #include <cstring>
+#include <typeinfo>
 
 using namespace std;
 
@@ -45,6 +46,19 @@ class Worker {
     string getName();
     Statistic getStats();
     Position getPosition();
+    template<typename T>
+    void GetTool(T* t) {
+        for (typename list<Tool*>::iterator it = tools.begin(); it != tools.end(); ++it)
+        {
+            if (typeid(*it) == typeid(t))
+            {
+                cout << "Deu match" << endl;
+                return;
+            }
+            
+        };
+        cout << "Não deu match" << endl;
+    }
     friend std::ostream& operator<< (std::ostream& p_os, Worker p_worker);
 
 };
