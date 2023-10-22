@@ -40,7 +40,7 @@ class Worker {
     void work(); //update
     void use();
     void subscribeWorkshops(list<Workshop*> ws);
-    void subscribeWorkshop(Workshop* ws);
+    void subscribeWorkshops(Workshop* ws);
     // void leaveWorkshops(list<Workshop*> ws);
     string getName();
     Statistic getStats();
