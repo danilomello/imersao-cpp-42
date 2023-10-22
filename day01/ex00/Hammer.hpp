@@ -18,7 +18,7 @@ class Hammer: public Tool {
         };
 
         virtual void use() {
-            cout << "Batendo feliz." << endl;
+            cout << "batendo feliz." << endl;
             numberOfUse++;
         }
 };

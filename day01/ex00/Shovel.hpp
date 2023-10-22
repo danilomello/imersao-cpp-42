@@ -18,7 +18,7 @@ class Shovel: public Tool {
         };
 
         virtual void use() {
-            cout << "Cavando feliz." << endl;
+            cout << "cavando feliz." << endl;
             numberOfUse++;
         }
 };

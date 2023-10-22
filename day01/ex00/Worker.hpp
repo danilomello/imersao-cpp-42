@@ -7,6 +7,7 @@ class Shovel;
 #include "Workshop.hpp"
 class Workshop;
 #include <list>
+#include <cstring>
 
 using namespace std;
 
@@ -27,13 +28,24 @@ class Worker {
     Position coordonnee;
     Statistic stat;
     list<Tool*> tools;
+    list<Workshop*> workshops;
+    string name;
+    void initWorker();
 
     public:
     Worker();
-    void getTool(Tool* t);
+    Worker(string name);
+    void takeTool(Tool* t, Worker* w);
     void dropTool(Tool* t);
     void work(); //update
     void use();
+    void subscribeWorkshops(list<Workshop*> ws);
+    void subscribeWorkshop(Workshop* ws);
+    // void leaveWorkshops(list<Workshop*> ws);
+    string getName();
+    Statistic getStats();
+    Position getPosition();
+    friend std::ostream& operator<< (std::ostream& p_os, Worker p_worker);
 
 };
 
