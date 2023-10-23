@@ -20,21 +20,21 @@ int main() {
     Hammer* h = new Hammer();
 
     Worker w1 = Worker("Ramiro");
-    w1.takeTool(s, &w1);
-    w1.subscribeWorkshops(ws_list);
     Worker w2 = Worker("Julinho");
+    cout << w1 << endl;
     cout << w2 << endl;
-
+    w1.takeTool(s, &w1);
+    cout << w1.getName() << " pegou a pá" << endl;
     w2.takeTool(h, &w2);
-    // w2.getTool(s, &w1);
+    cout << w2.getName() << " pegou o martelo" << endl;
 
+    w1.subscribeWorkshops(ws_list);
     ws.subscribeWorker(&w1);
     ws.subscribeWorker(&w2);
     ws.executeworkDay();
+    w2.takeTool(s, &w1);
+    cout << "O trabalhador " << w2.getName() << " pegou a pá do " << w1.getName() << endl;
+    ws.executeworkDay();
     ws.unsubscribeWorker(&w1);
     ws.executeworkDay();
-
-    w1.~Worker();
-    s->use();
-
 }
