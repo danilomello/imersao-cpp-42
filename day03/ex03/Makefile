@@ -1,11 +1,11 @@
 CXX = c++
 TARGET=main.cpp
 
-NAME			= shape
+NAME			= employee
 FLAGS			= -Wall -Wextra -Werror -std=c++98
 OBJ_PATH		= ./objs/
 SRC				= main.cpp
-HEADER			= shape.hpp rectangle.hpp circle.hpp
+HEADER			= hourlyEmployee.hpp salariedEmployee.hpp employee.hpp employeeManagement.hpp
 OBJ				= $(SRC:%.cpp=$(OBJ_PATH)%.o)
 
 all: $(NAME)

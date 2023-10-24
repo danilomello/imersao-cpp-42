@@ -48,10 +48,12 @@ class Apprentice: public ContractEmployee {
     public:
         Apprentice(string name, int wage, int school_hours) {
             this->school_hours = school_hours;
+            this->wage = wage;
+            this->name = name;
         }
 
         virtual void calculate_payment() {
-            cout << "Pagamento do trabalhador " << this->name << ": " << (wage - (absent_hours * 10) + (school_hours/2)) << endl;
+            cout << "Pagamento do trabalhador " << this->name << ": " << (this->wage - (this->absent_hours * 10) + (this->school_hours/2)) << endl;
         }
 };
 
