@@ -1,3 +1,6 @@
+#ifndef PACKAGE_REDUCTION_H
+#define PACKAGE_REDUCTION_H
+
 #include "command.hpp"
 
 class packageReductionDiscountCommand: public command {
@@ -33,3 +36,5 @@ class packageReductionDiscountCommand: public command {
         packageReductionDiscountCommand(){};
         ~packageReductionDiscountCommand(){};
 };
+
+#endif
