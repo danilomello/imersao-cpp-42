@@ -5,33 +5,48 @@
 #include <cstring>
 #include <map>
 #include <algorithm>
+#include <vector>
 
 using namespace std;
 
 class command {
 
     protected:
+        struct Article {
+            string article;
+            float price;
+        };
         int id;
         string date;
         string client;
-        map<string, int> articles;
+        map<string, pair<int, float> > articles;
+
 
     public:
-        command(/* args */) {
+        command() {
 
         };
 
         ~command(){};
 
         void get_total_price(){
-            cout << "total" << endl;
+            if (articles.empty()) {
+                cout << "Empty command" << endl;
+            } else {
+                cout << "Item - qty - total price" << endl;
+                for (map<string, pair<int, float> >::iterator it = articles.begin(); 
+                    it != articles.end(); it++) {
+                    cout << it->first << " - " << 
+                        it->second.first << " - " << (it->second.first * it->second.second) << endl;
+                }
+            }
         };
 
-        void add_article(string article, int quantity){
-            this->articles[article] = quantity;
+        void add_article(string item, int quantity, float price){
+            articles[item] = make_pair(quantity, price); 
         };
 
-        map<string, int> get_articles(){
+        map<string, pair<int, float> > get_articles(){
             return this->articles;
         };
 
@@ -48,7 +63,6 @@ class command {
 
             return dst;
         }
-
 };
 
 #endif
