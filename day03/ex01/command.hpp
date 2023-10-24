@@ -29,16 +29,21 @@ class command {
 
         ~command(){};
 
-        void get_total_price(){
+        virtual void get_total_price(){
             if (articles.empty()) {
                 cout << "Empty command" << endl;
             } else {
-                cout << "Item - qty - total price" << endl;
+                cout << "Item \t qty \t total price" << endl;
+                float total_price = 0.0;
                 for (map<string, pair<int, float> >::iterator it = articles.begin(); 
                     it != articles.end(); it++) {
-                    cout << it->first << " - " << 
-                        it->second.first << " - " << (it->second.first * it->second.second) << endl;
+                    float item_price = it->second.first * it->second.second;
+                    cout << it->first << " \t " << 
+                        it->second.first << " \t " << item_price << endl;
+                    total_price+=item_price;
                 }
+
+                cout << "Total: " << total_price << endl;
             }
         };
 

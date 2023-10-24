@@ -1,17 +1,10 @@
-#ifndef THUESDAY_H
-#define THUESDAY_H
-
-#include <iostream>
-#include <cstring>
-#include <map>
 #include "command.hpp"
 
-class thuesdayDiscount: public command {
-    private:
+class packageReductionDiscountCommand: public command {
 
+    private:
+        /* data */
     public:
-        thuesdayDiscount(){};
-        ~thuesdayDiscount(){};
 
         virtual void get_total_price() {
             if (articles.empty()) {
@@ -23,14 +16,20 @@ class thuesdayDiscount: public command {
                     it != articles.end(); it++) {
                     float item_total = it->second.first * it->second.second;
                     cout << it->first << " - " << 
-                        it->second.first << " - " << (item_total * 0.9) << endl;
+                        it->second.first << " - " << item_total << endl;
                         total_price += item_total;
                 }
 
-                cout << "Total: " << total_price << endl;
+                if (total_price > 150.0) {
+                    cout << "Total: " << total_price << endl;
+                    cout << "10 euro discount applied" << endl;
+                    total_price-=10.0;
+                }
+
+                cout << "Total with discount: " << total_price << endl;
             }
         }
-    };
 
-
-#endif
+        packageReductionDiscountCommand(){};
+        ~packageReductionDiscountCommand(){};
+};
