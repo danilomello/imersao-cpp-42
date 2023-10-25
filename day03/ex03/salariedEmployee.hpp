@@ -31,6 +31,10 @@ class ContractEmployee: public Employee {
             this->name = name;
         }
 
+        void add_absent_hours(int hours) {
+            this->absent_hours+=hours;
+        }
+
         virtual void execute_workday() {
             this->worked_days++;
         }
