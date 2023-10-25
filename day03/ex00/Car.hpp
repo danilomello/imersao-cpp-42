@@ -46,10 +46,14 @@ public:
         this->speed = 50;
     }
 
-    void lower_speed() {
+    void shift_gears_down() {
         brake->apply_force_on_brakes(50);
         transmission->shift_gears_down();
         this->speed = 20;
+    }
+
+    void shift_gears_up() {
+        this->transmission->shift_gears_up();
     }
 
     void reverse() {
@@ -62,6 +66,10 @@ public:
 
     void straighten_wheels() {
         direction->straighten_wheels();
+    }
+
+    void apply_force_on_brakes(int force) {
+        this->brake->apply_force_on_brakes(force);
     }
 
     void apply_emergency_brakes() {
