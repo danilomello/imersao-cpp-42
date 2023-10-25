@@ -16,7 +16,7 @@ class FileLogger: public Ilogger {
         virtual void write(std::string text) {
             fstream fs;
             fs.open("./log.txt", std::fstream::in | std::fstream::out | std::fstream::app);
-            fs << "[File logger] " << text << endl;
+            fs << text << endl;
             fs.close();
         }
 };
