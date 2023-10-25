@@ -12,6 +12,7 @@ class TempWorker: public Employee {
     private:
         int worked_days;
         int hour_value;
+        int working_hours;
         string name;
 
     public:
@@ -20,6 +21,11 @@ class TempWorker: public Employee {
             this->worked_days = 0;
             this->hour_value = hour_value;
             this->name = name;
+            this->working_hours = 0;
+        }
+
+        void mobilise(int hours) {
+            this->working_hours+=hours;
         }
 
         virtual void execute_workday() {
@@ -27,7 +33,7 @@ class TempWorker: public Employee {
         }
 
         virtual void calculate_payment() {
-            cout << "Pagamento do trabalhador " << this->name << ": " << (worked_days * hour_value) << endl;
+            cout << "Pagamento do trabalhador " << this->name << ": " << (worked_days * 7 * hour_value) << endl;
         }
 
 

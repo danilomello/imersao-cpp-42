@@ -48,6 +48,8 @@ class Apprentice: public ContractEmployee {
     public:
         Apprentice(string name, int wage, int school_hours) {
             this->school_hours = school_hours;
+            this->wage = wage;
+            this->name = name;
         }
 
         virtual void calculate_payment() {
