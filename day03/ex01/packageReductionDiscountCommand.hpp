@@ -9,28 +9,17 @@ class packageReductionDiscountCommand: public command {
         /* data */
     public:
 
-        virtual void get_total_price() {
-            if (articles.empty()) {
-                cout << "Empty command" << endl;
+        virtual float get_total_price() {
+            
+            float total_price = command::get_total_price();
+            if (total_price > 150) {
+                cout << "10 euro discount applied" << endl;
+                cout << "total w/ discount: " << (command::total_price - 10.0) << endl;
             } else {
-                float total_price = 0.0;
-                cout << "Item - qty - total price" << endl;
-                for (map<string, pair<int, float> >::iterator it = articles.begin(); 
-                    it != articles.end(); it++) {
-                    float item_total = it->second.first * it->second.second;
-                    cout << it->first << " - " << 
-                        it->second.first << " - " << item_total << endl;
-                        total_price += item_total;
-                }
-
-                if (total_price > 150.0) {
-                    cout << "Total: " << total_price << endl;
-                    cout << "10 euro discount applied" << endl;
-                    total_price-=10.0;
-                }
-
-                cout << "Total with discount: " << total_price << endl;
+                cout << "no discount =(" << endl;
             }
+
+            return total_price;
         }
 
         packageReductionDiscountCommand(){};

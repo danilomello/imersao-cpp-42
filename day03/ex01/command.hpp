@@ -20,21 +20,21 @@ class command {
         string date;
         string client;
         map<string, pair<int, float> > articles;
+        int total_price;
 
 
     public:
         command() {
-
+            this->total_price = 0.0;
         };
 
         ~command(){};
 
-        virtual void get_total_price(){
+        virtual float get_total_price(){
             if (articles.empty()) {
                 cout << "Empty command" << endl;
             } else {
                 cout << "Item \t qty \t total price" << endl;
-                float total_price = 0.0;
                 for (map<string, pair<int, float> >::iterator it = articles.begin(); 
                     it != articles.end(); it++) {
                     float item_price = it->second.first * it->second.second;
@@ -45,6 +45,8 @@ class command {
 
                 cout << "Total: " << total_price << endl;
             }
+
+            return this->total_price;
         };
 
         void add_article(string item, int quantity, float price){
