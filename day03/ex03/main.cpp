@@ -15,5 +15,14 @@ int main() {
     em.add_employee(tw);
     em.add_employee(ap);
 
+    ce->add_absent_hours(10);
+    tw->mobilise(100);
+
+    em.execute_workday();
+    em.execute_workday();
+    em.execute_workday();
+
+    em.calculate_payroll();
+
     return 0;
 }

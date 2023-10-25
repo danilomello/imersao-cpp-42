@@ -33,7 +33,8 @@ class TempWorker: public Employee {
         }
 
         virtual void calculate_payment() {
-            cout << "Pagamento do trabalhador " << this->name << ": " << (worked_days * 7 * hour_value) << endl;
+            cout << "Pagamento do trabalhador " << this->name << ": " << 
+                ((worked_days * 7 + working_hours) * hour_value) << endl;
         }
 
 
