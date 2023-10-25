@@ -8,7 +8,7 @@ class Ilogger {
 
 
     public:
-        virtual void write(std::string) = 0;
+        virtual void write(std::string text) = 0;
 };
 
 #endif
