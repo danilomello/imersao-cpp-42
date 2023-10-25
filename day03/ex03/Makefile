@@ -5,11 +5,7 @@ NAME			= employee
 FLAGS			= -Wall -Wextra -Werror -std=c++98
 OBJ_PATH		= ./objs/
 SRC				= main.cpp
-<<<<<<< HEAD
-HEADER			= hourlyEmployee.hpp salariedEmployee.hpp employee.hpp employeeManagement.hpp
-=======
 HEADER			= employeeManagement.hpp hourlyEmployee.hpp salariedEmployee.hpp
->>>>>>> a2d3fc5710b94b87ff472e94b4a6ff01636568d9
 OBJ				= $(SRC:%.cpp=$(OBJ_PATH)%.o)
 
 all: $(NAME)
