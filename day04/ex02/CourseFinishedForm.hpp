@@ -3,11 +3,15 @@
 
 #include "Form.hpp"
 
+using namespace std;
+
 class CourseFinishedForm : public Form { 
     private:
         /* data */
     public:
-        void execute(){};
+        void execute(){
+            cout << "Preenchendo formulário de finalização de curso" << endl;
+        };
         CourseFinishedForm(/* args */){};
         ~CourseFinishedForm(){};
 };

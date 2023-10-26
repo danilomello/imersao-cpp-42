@@ -10,40 +10,30 @@
 Form* Secretary::createForm(FormType p_formType) {
     
     Form* form;
+    
+    switch (p_formType) {
 
-    switch (p_formType)
-    {
-    default:
-        form = new CourseFinishedForm();
-        break;
+        case CourseFinished:
+            form = new CourseFinishedForm();
+            break;
+
+        case NeedCourseCreation:
+            form = new NeedCourseCreationForm();
+            break;
+        
+        case NeedMoreClassRoom:
+            form = new NeedMoreClassRoomForm();
+            break;
+
+        case SubscriptionToCourse:
+            form = new SubscriptionToCourseForm();
+
+        default:
+            break;
     }
 
     return form;
-
-
-    // FormType formType = FormType();
-    
-    // switch (p_formType)
-    // {
-    // case 0:
-    //     return new CourseFinishedForm();
-    //     break;
-    // case 1:
-    //     return new NeedCourseCreationForm();
-    //     break;
-    
-    // case 2:
-    //     return new NeedMoreClassRoomForm();
-    //     break;
-
-    // case 3:
-    //     return new SubscriptionToCourseForm();
-
-    // default:
-    //     break;
-    // }
 }
-
 
 void Secretary::archiveForm() {
     return;

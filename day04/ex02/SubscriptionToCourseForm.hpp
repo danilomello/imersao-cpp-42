@@ -3,11 +3,14 @@
 
 #include "Form.hpp"
 
+using namespace std;
 class SubscriptionToCourseForm : public Form {
     private:
         /* data */
     public:
-        void execute();
+        void execute(){
+            cout << "Preenchendo formulário de inscrição de curso" << endl;
+        };
         SubscriptionToCourseForm(/* args */){};
         ~SubscriptionToCourseForm(){};
 };
