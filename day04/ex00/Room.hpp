@@ -6,6 +6,11 @@
 class Student;
 class Professor;
 
+enum class Event
+{
+	RingBell
+};
+
 class Room
 {
 private:

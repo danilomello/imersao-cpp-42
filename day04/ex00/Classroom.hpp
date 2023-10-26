@@ -2,9 +2,9 @@
 #define CLASSROOM_H
 
 #include "Course.hpp"
+#include "Room.hpp"
 
-
-class Classroom
+class Classroom : public Room
 {
 private:
     Course* _currentRoom;

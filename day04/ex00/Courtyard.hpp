@@ -3,7 +3,7 @@
 
 #include "Room.hpp"
 
-class Courtyard {
+class Courtyard : public Room {
     private:
         /* data */
     public:
