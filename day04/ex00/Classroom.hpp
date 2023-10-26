@@ -10,8 +10,8 @@ private:
     Course* _currentRoom;
 
 public:
-    Classroom();
-    ~Classroom();
+    Classroom(){};
+    ~Classroom(){};
     void assignCourse(Course* p_course);
 };
 

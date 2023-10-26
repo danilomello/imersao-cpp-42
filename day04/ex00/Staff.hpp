@@ -9,8 +9,8 @@ class Staff {
         /* data */
     public:
         void sign(Form* p_form);
-        Staff(/* args */);
-        ~Staff();
+        Staff(/* args */){};
+        ~Staff(){};
 };
 
 #endif

@@ -10,8 +10,8 @@ class SecretarialOffice : public Room {
         std::vector<Form*> _archivedForms;
 
     public:
-        SecretarialOffice(/* args */);
-        ~SecretarialOffice();
+        SecretarialOffice(/* args */){};
+        ~SecretarialOffice(){};
 };
 
 #endif

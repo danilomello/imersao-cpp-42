@@ -11,8 +11,8 @@ class Secretary : public Staff{
     public:
         Form* createForm(FormType p_formType);
 	    void archiveForm();
-        Secretary(/* args */);
-        ~Secretary();
+        Secretary(/* args */){};
+        ~Secretary(){};
 };
 
 #endif

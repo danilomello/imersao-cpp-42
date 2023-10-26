@@ -8,8 +8,8 @@ class CourseFinishedForm : public Form {
         /* data */
     public:
         void execute();
-        CourseFinishedForm(/* args */);
-        ~CourseFinishedForm();
+        CourseFinishedForm(/* args */){};
+        ~CourseFinishedForm(){};
 };
 
 #endif

@@ -7,8 +7,8 @@ class HeadmasterOffice : public Room {
     private:
         /* data */
     public:
-        HeadmasterOffice(/* args */);
-        ~HeadmasterOffice();
+        HeadmasterOffice(/* args */){};
+        ~HeadmasterOffice(){};
 };
 
 

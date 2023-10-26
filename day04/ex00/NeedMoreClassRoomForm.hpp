@@ -9,8 +9,8 @@ class NeedMoreClassRoomForm : public Form
         /* data */
     public:
         void execute();
-        NeedMoreClassRoomForm(/* args */);
-        ~NeedMoreClassRoomForm();
+        NeedMoreClassRoomForm(/* args */){};
+        ~NeedMoreClassRoomForm(){};
 };
 
 

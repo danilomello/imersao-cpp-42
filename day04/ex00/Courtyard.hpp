@@ -7,8 +7,8 @@ class Courtyard : public Room {
     private:
         /* data */
     public:
-        Courtyard(/* args */);
-        ~Courtyard();
+        Courtyard(/* args */){};
+        ~Courtyard(){};
 };
 
 #endif

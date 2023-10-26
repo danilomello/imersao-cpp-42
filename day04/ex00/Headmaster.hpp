@@ -9,8 +9,8 @@ class Headmaster : public Staff{
         std::vector<Form*> _formToValidate;
     public:
         void receiveForm(Form* p_form);
-        Headmaster(/* args */);
-        ~Headmaster();
+        Headmaster(/* args */){};
+        ~Headmaster(){};
 };
 
 #endif

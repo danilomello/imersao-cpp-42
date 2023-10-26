@@ -8,8 +8,8 @@ class SubscriptionToCourseForm : public Form {
         /* data */
     public:
         void execute();
-        SubscriptionToCourseForm(/* args */);
-        ~SubscriptionToCourseForm();
+        SubscriptionToCourseForm(/* args */){};
+        ~SubscriptionToCourseForm(){};
 };
 
 #endif

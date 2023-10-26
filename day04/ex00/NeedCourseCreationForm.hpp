@@ -9,8 +9,8 @@ class NeedCourseCreationForm : public Form
         /* data */
     public:
         void execute();
-        NeedCourseCreationForm(/* args */);
-        ~NeedCourseCreationForm();
+        NeedCourseCreationForm(/* args */){};
+        ~NeedCourseCreationForm(){};
 };
 
 #endif

@@ -11,8 +11,8 @@ class Professor : public Staff {
         void assignCourse(Course* p_course);
         void doClass();
         void closeCourse();
-        Professor(/* args */);
-        ~Professor();
+        Professor(/* args */){};
+        ~Professor(){};
 };
 
 

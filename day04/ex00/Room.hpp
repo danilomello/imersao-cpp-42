@@ -20,8 +20,13 @@ private:
 	int _numberOfClassToGraduate;
 	int _maximumNumberOfStudent;
 public:
-    Room(/* args */);
-    ~Room();
+    Room(){
+		this->_maximumNumberOfStudent = 0;
+		this->_numberOfClassToGraduate = 0;
+	};
+    ~Room(){};
+
+	Professor* getResponsible() {return this->_responsable;};
 };
 
 #endif

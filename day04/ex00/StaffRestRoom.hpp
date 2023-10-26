@@ -8,8 +8,8 @@ class StaffRestRoom : public Room {
     private:
         /* data */
     public:
-        StaffRestRoom(/* args */);
-        ~StaffRestRoom();
+        StaffRestRoom(/* args */){};
+        ~StaffRestRoom(){};
 
 };
 #endif

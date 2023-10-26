@@ -10,9 +10,10 @@ class Person {
         std::string _name;
 	    Room* _currentRoom;
     public:
+        Person(){};
         Person(std::string p_name);
 	    Room* room() {return (_currentRoom);}
-        ~Person();
+        ~Person(){};
 };
 
 #endif

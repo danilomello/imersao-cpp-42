@@ -12,8 +12,8 @@ class Student : public Person {
         void attendClass(Classroom* p_classroom);
         void exitClass();
         void graduate(Course* p_course);
-        Student(/* args */);
-        ~Student();
+        Student(/* args */){};
+        ~Student(){};
 };
 
 #endif
