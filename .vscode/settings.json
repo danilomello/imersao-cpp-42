@@ -51,6 +51,7 @@
         "cstring": "cpp",
         "list": "cpp",
         "ctime": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "numbers": "cpp"
     }
 }
