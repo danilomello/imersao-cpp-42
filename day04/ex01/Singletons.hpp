@@ -1,32 +1,51 @@
-#include <cstring>
+#include <string>
 #include <iostream>
 #include <list>
-#include "Student.hpp"
+#include "../ex00/Student.hpp"
+#include "../ex00/Staff.hpp"
+#include "../ex00/Course.hpp"
+#include "../ex00/Room.hpp"
 
 using namespace std;
 
-class StudentList {
+template <typename T, typename U>
+class Singleton {
     public:
-        static StudentList& getInstance() {
+        static T& getInstance() {
             if (!instance) {
-                instance = new StudentList;
+                instance = new T;
             }
             return *instance;
         }
 
-        void addStudent(Student* student) {
-            this->students.push_back(student);
+        void add_item(U* item) {
+            this->objects.push_back(item);
         }
 
+        void remove_item(U * item) {
+            this->objects.remove(item);
+        }
+
+        list<U*> getObjects() {
+            return this->objects;
+        }
+
+    protected:
+        Singleton() {}
+
     private:
-        StudentList() {}
-        StudentList(const StudentList&);
-        StudentList& operator=(const StudentList&);
-
-        static StudentList* instance;
-
-        list<Student*> students;
+        static T* instance;
+        list<U*> objects;
 };
 
+template <typename T, typename U>
+T* Singleton<T, U>::instance = 0;
 
-StudentList* StudentList::instance = NULL;
+
+class StudentList : public Singleton<StudentList, Student> {};
+
+class StaffList : public Singleton<StaffList, Staff> {};
+
+class CourseList : public Singleton<CourseList, Course> {};
+
+class RoomList : public Singleton<RoomList, Room> {};
