@@ -2,7 +2,7 @@
 #define FORM_H
 
 
-enum class FormType {
+enum FormType {
 	CourseFinished,
 	NeedMoreClassRoom,
 	NeedCourseCreation,

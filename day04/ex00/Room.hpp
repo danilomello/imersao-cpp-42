@@ -6,7 +6,7 @@
 class Student;
 class Professor;
 
-enum class Event
+enum Event
 {
 	RingBell
 };
