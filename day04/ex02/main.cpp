@@ -13,6 +13,11 @@ using namespace std;
 int main() {
     Headmaster headmaster = Headmaster();
     Secretary secretary = Secretary();
-    Form* form = secretary.createForm(CourseFinished);
-    form->execute();
+    Form* form1 = secretary.createForm(CourseFinished);
+    Form* form2 = secretary.createForm(SubscriptionToCourse);
+
+    headmaster.receiveForm(form1);
+    headmaster.receiveForm(form2);
+    headmaster.sign(form1);
+    headmaster.signAll();
 }

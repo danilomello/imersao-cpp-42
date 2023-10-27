@@ -2,13 +2,15 @@
 #define STAFF_H
 
 #include "Person.hpp"
-class Form;
+#include "Form.hpp"
 
 class Staff {
     private:
         /* data */
     public:
-        void sign(Form* p_form);
+        void sign(Form* p_form) {
+            p_form->execute();
+        };
         Staff(/* args */){};
         ~Staff(){};
 };
