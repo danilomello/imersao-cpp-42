@@ -1,6 +1,7 @@
 #ifndef NEED_COURSE_CREATION_FORM_H
 #define NEED_COURSE_CREATION_FORM_H
 
+#include <iostream>
 #include "Form.hpp"
 
 using namespace std;

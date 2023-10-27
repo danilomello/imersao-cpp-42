@@ -2,6 +2,7 @@
 #define SUBSCRIPTION_COURSE_FORM_H
 
 #include "Form.hpp"
+#include <iostream>
 
 using namespace std;
 class SubscriptionToCourseForm : public Form {

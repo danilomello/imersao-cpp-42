@@ -1,16 +1,23 @@
-#ifdef HEADMASTER_H
+#ifndef HEADMASTER_H
 #define HEADMASTER_H
 
 #include "Staff.hpp"
 #include "Form.hpp"
+#include <list>
+
+using namespace std;
 
 class Headmaster : public Staff{
+    
     private:
-        std::vector<Form*> _formToValidate;
+        list<Form*> _formToValidate;
+    
     public:
-        void receiveForm(Form* p_form);
-        Headmaster(/* args */){};
+        Headmaster(){};
         ~Headmaster(){};
+        void receiveForm(Form* p_form) {
+            this->_formToValidate.push_back(p_form);
+        };
 };
 
 #endif

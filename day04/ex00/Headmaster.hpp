@@ -1,4 +1,4 @@
-#ifdef HEADMASTER_H
+#ifndef HEADMASTER_H
 #define HEADMASTER_H
 
 #include "Staff.hpp"

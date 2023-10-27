@@ -35,8 +35,8 @@ Form* Secretary::createForm(FormType p_formType) {
     return form;
 }
 
-void Secretary::archiveForm() {
-    return;
+void Secretary::archiveForm(Form* p_form) {
+    cout << "Form " << p_form << " está sendo arquivado" << endl;
 }
 
 Secretary::Secretary(/* args */){};
